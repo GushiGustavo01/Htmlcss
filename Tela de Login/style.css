@@ -1,9 +1,10 @@
 :root{
-   --cor1:#5C23D9;
+  --cor1: #5C23D9;
   --cor2: #4D3BDF;
   --cor3: #414CE8;
   --cor4: #345EF1;
   --cor5: #2B6BF7;
+  --cor6: #ffffff;
 }
 
 *{
@@ -14,21 +15,50 @@
 
 }
 body{
-    background-image: linear-gradient(to right, var(--cor3) var(--cor4) var(--cor5));
+    background: linear-gradient(to right, var(--cor1), var(--cor2), var(--cor3), var(--cor4), var(--cor5));
+    color:var(--cor6);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .box{
     height: 100vh;
-    border: 2px solid green;
+   
     display: flex;
     justify-content: center;
     align-items: center;
+  
     
 
 }
+form{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 20px 20px 20px;
+    border-radius: 10px;
+}
 fieldset{
-    padding: 30px 10px;
+    padding: 30px 15px;
+    border: 2px solid var(--cor3);
 }
 legend{
+   background-color: var(--cor3);
     text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.inputbox{
+
+    position: relative;
+}
+
+.inputUser{
+    width: 100%;
+
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--cor6);
+    color: var(--cor6);
+
+    
+
 }
