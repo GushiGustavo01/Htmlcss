@@ -1,3 +1,11 @@
+:root{
+   --cor1:#5C23D9;
+  --cor2: #4D3BDF;
+  --cor3: #414CE8;
+  --cor4: #345EF1;
+  --cor5: #2B6BF7;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,12 +14,21 @@
 
 }
 body{
-    height: 100vh;
-    width: 100vh;
+    background-image: linear-gradient(to right, var(--cor3) var(--cor4) var(--cor5));
 }
 
 .box{
-    position: absolute;
-
+    height: 100vh;
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+
+}
+fieldset{
+    padding: 30px 10px;
+}
+legend{
+    text-align: center;
 }
