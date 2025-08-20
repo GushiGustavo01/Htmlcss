@@ -4,7 +4,7 @@
   --cor3: #414CE8;
   --cor4: #345EF1;
   --cor5: #2B6BF7;
-  --cor6: #ffffff;
+  --cor6: #ffffffd8;
 }
 
 *{
@@ -51,14 +51,26 @@ legend{
 }
 
 .inputUser{
+    padding: 2px;
     width: 100%;
-
     background: none;
     border: none;
     outline: none;
-    border-bottom: 1px solid var(--cor6);
+    border-bottom: 2px solid var(--cor6);
     color: var(--cor6);
-
-    
-
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.animacao{
+    color: rgba(255, 255, 255, 0.596);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .animacao, .inputUser:valid ~ .animacao{
+    top: -18px;
+    font-size: 15px;
+    color: var(--cor4);
 }
