@@ -4,7 +4,7 @@
   --cor3: #414CE8;
   --cor4: #345EF1;
   --cor5: #2B6BF7;
-  --cor6: #ffffffd8;
+  --cor6: #ffffff;
 }
 
 *{
@@ -40,7 +40,7 @@ fieldset{
     border: 2px solid var(--cor3);
 }
 legend{
-   background-color: var(--cor3);
+    background: linear-gradient(to right, var(--cor1), var(--cor2), var(--cor3), var(--cor4), var(--cor5));
     text-align: center;
     padding: 10px;
     border-radius: 5px;
@@ -50,16 +50,30 @@ legend{
     position: relative;
 }
 
-.inputUser{
+.inputUser{ 
+ 
     padding: 2px;
     width: 100%;
-    background: none;
+    background: transparent;
     border: none;
     outline: none;
     border-bottom: 2px solid var(--cor6);
     color: var(--cor6);
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 1px;
+}
+.bar{
+position: absolute;
+bottom: 0;
+left: 0;
+height: 2px;
+width: 0;
+background: var(--cor5);
+transition:all 0.5s ease-in-out
+}
+input:focus  ~ .bar, input:valid ~ .bar {
+    width: 100%;
+
 }
 .animacao{
     color: rgba(255, 255, 255, 0.596);
@@ -70,7 +84,22 @@ legend{
     transition: .5s;
 }
 .inputUser:focus ~ .animacao, .inputUser:valid ~ .animacao{
-    top: -18px;
+    top: -20px;
     font-size: 15px;
     color: var(--cor4);
+}
+.bnt{
+    width: 100%;
+    background: linear-gradient(to right, var(--cor1), var(--cor2), var(--cor3), var(--cor4), var(--cor5));
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--cor6);
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+.bnt:hover{
+    background: linear-gradient(to right, var(--cor5), var(--cor4), var(--cor3), var(--cor2), var(--cor1));
+   
 }

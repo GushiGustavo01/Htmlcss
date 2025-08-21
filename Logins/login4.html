@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login4</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+           
+        }
+        main{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: 300px;
+        }
+      
+        
+        .inputBox{
+            position: relative;
+            margin-bottom: 20px;
+          
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #ccc;
+            font-size: 16px;
+           
+        }
+        .bar{
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: dodgerblue;
+            transition:all 0.5s ease-in-out
+            
+        }
+        input:focus ~ .bar, input:valid ~ .bar{
+            width: 100%;
+        }
+          
+
+
+
+        
+    </style>
+            <main>
+                <form class="container">
+
+                   <div class="inputBox">
+                       
+                       <input type="text" name="nome" placeholder="Nome" autocomplete="off" required>
+                       <div class="bar"></div>
+                   </div>
+
+                
+                <div class="inputBox">
+                    
+              
+                    <input type="text" name="nome" placeholder="Senha" autocomplete="off" required>
+                    <div class="bar"></div>
+
+
+                </div>
+                </form>
+            </main> 
+</body>
+</html>
